@@ -1,10 +1,37 @@
 <head>
   <script>
-    function ok(){
-     window.alert('ok'); 
+    function bhaskara(){
+      //let a = parseInt(document.getElementById("ina"), 10); 
+      let a = document.getElementById("ina").value;
+      let b = document.getElementById("inb").value;
+      let c = document.getElementById("inc").value;
+      let k = (b*b)-4*a*c;
+      let res1 = (-1*b) + Math.sqrt(k)/(2*a);
+      let res2 = (-1*b) - Math.sqrt(k)/(2*a);
+      let gab = document.getElementById("gabarito");
+      gab.innerHTML = `<p>delta:&nbsp;${k}<br><hr>x1:&nbsp;${res1}</p><p>x2:&nbsp;${res2}</p>`;
+      gab.style.display = 'block';
     }
   </script>
 </head>
 <body>
-   <input type="button" value="Click me" onclick="ok()"> 
+   
+  a <input id="ina" type="number" value="0">
+  <br> 
+  b <input id="inb" type="number" value="0">
+  <br>
+  c <input id="inc" type="number" value="0">
+  <br>
+  <input type="button" value="Click me" onclick="bhaskara()"> 
+<br>
+<div id="gabarito" style="display: none">
+<p>
+
+</p>
+
+<p>
+
+</p>
+</div>
+
 </body>
