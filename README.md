@@ -1,2 +1,2 @@
 # plajuan.github.io
-Own Study projects
+Own Study projects - HTML and JS - Math
