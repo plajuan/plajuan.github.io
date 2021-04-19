@@ -15,7 +15,7 @@
       let c = document.getElementById("inc").value;
       let k = (b*b)-4*a*c;
       let res1 = ((-1*b) + Math.sqrt(k))/(2*a);
-      let res2 = (-1*b) - Math.sqrt(k)/(2*a);
+      let res2 = ((-1*b) - Math.sqrt(k))/(2*a);
       let gab = document.getElementById("gabarito");
       gab.innerHTML = `<p>delta:&nbsp;${k}<br><hr>x1:&nbsp;${res1}</p><p>x2:&nbsp;${res2}</p>`;
       document.getElementById("card1").style.display = 'block';
