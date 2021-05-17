@@ -8,32 +8,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-function calculo() { 
+function calculo() { console.log("a")
     let valor = document.getElementById("ina").value;
     let gab = document.getElementById("gabarito");
 let res = (valor*0.8)/30;
-gab.innerHTML = `<p>delta:&nbsp;${res}</p>`;
+gab.innerHTML = `<p>${res.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>`;
 }
-
-
-
   </script>
 </head>
 <body>
   <div class="jumbotron text-center">
     <h1>valor do salario</h1>     
   </div>
-<form style="padding: 15pt;">
-  <div class="form-group">
-    <label for="ina">valor da casa</label>
-    <input type="number" class="form-control" placeholder="0" id="ina" style="">
-  </div>
-  <button type="button" class="btn btn-primary" onclick="bhaskara()">Calcular</button>
-  <div class="card" style="display: none;" id="card1" style="padding-left: 10pt; padding-right: 10pt;">
-    <div class="card-body" id="gabarito">
-        
+<form style="padding: 15pt;">  
+    <div class="form-group">
+      <label for="ina">valor da casa</label>
+      <input type="number" class="form-control" placeholder="0" id="ina" style="">
     </div>
-  </div> 
+  <button type="button" class="btn btn-primary" onclick="calculo()">Calcular</button>
 </form>
+<div class="card" style="display: block;" id="card1" style="padding-left: 10pt; padding-right: 10pt;">
+    <div class="card-body" id="gabarito"></div>
+  </div> 
 </body>
 </html>
