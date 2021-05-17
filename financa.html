@@ -9,7 +9,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
 function calculo() { 
-    let valor = document.getElementById("ina").value;;
+    let valor = document.getElementById("ina").value;
+    let gab = document.getElementById("gabarito");
 let res = (valor*0.8)/30;
 gab.innerHTML = `<p>delta:&nbsp;${res}</p>`;
 }
@@ -24,7 +25,7 @@ gab.innerHTML = `<p>delta:&nbsp;${res}</p>`;
   </div>
 <form style="padding: 15pt;">
   <div class="form-group">
-    <label for="ina">a</label>
+    <label for="ina">valor da casa</label>
     <input type="number" class="form-control" placeholder="0" id="ina" style="">
   </div>
   <button type="button" class="btn btn-primary" onclick="bhaskara()">Calcular</button>
