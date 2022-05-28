@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>fómula de bhaskara automática >:)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function bhaskara(){
+      let a = document.getElementById("ina").value;
+      let b = document.getElementById("inb").value;
+      let c = document.getElementById("inc").value;
+      let k = (b*b)-4*a*c;
+      let res1 = ((-1*b) + Math.sqrt(k))/(2*a);
+      let res2 = ((-1*b) - Math.sqrt(k))/(2*a);
+      let gab = document.getElementById("gabarito");
+      let soma = (-1*b)/a;
+      let multip = c/a;
+      gab.innerHTML = `<p>delta:&nbsp;${k}<br><hr>x¹:&nbsp;${res1}</p>
+      <p>x²:&nbsp;${res2}</p> <hr>
+      <p>
+        x¹+x²=&nbsp;${soma}
+        <br>
+        x¹.x²=&nbsp;${multip}
+        </p> 
+      `;
+      document.getElementById("card1").style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <nav class="site-header sticky-top py-1" style="background-color: #0d0d0d;">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">   
+      <a class="py-2 d-none d-md-inline-block" href="https://plajuan.github.io/financa.html">Finanças</a>
+    </div>
+  </nav>
+  <div class="jumbotron text-center">
+    <h1>bhaskara</h1>     
+  </div>
+<form style="padding: 15pt;">
+  <div class="form-group">
+    <label for="ina">a</label>
+    <input type="number" class="form-control" placeholder="0" id="ina" style="">
+  </div>
+  <div class="form-group">
+    <label for="inb">b</label>
+    <input type="number" class="form-control" placeholder="0" id="inb">
+  </div>
+  <div class="form-group">
+    <label for="inc">c</label>
+    <input type="number" class="form-control" placeholder="0" id="inc">
+  </div>
+  <button type="button" class="btn btn-primary" onclick="bhaskara()">Calcular</button>
+</form>
+  <div class="card" style="display: none;" id="card1" style="padding-left: 10pt; padding-right: 10pt;">
+    <div class="card-body" id="gabarito"></div>
+  </div> 
+
+</body>
+</html>
